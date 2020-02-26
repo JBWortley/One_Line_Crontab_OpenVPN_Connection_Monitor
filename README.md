@@ -9,4 +9,5 @@ I've found that the network device created for my TAP connection disappears when
 # Crontab entry:
 
 SHELL=/bin/bash
+
 */5 * * * * if [ "$(cat /sys/class/net/tap0/operstate)" = "unknown" ]; then date; else sudo shutdown -r now; fi
